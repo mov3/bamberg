@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+       <title>Bamberg</title>
+       <link rel="stylesheet" href="css/style.css"/>
+       <link rel="stylesheet" href="css/foundation.css"/>
+       <link rel="stylesheet" href="css/cssmap-brazil.css" />
+	   
+       <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>	
+	   <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+	   <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+	   <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	   <script type="text/javascript" src="js/foundation.min.js"></script>
+	   <script type="text/javascript" src="js/jquery.cssmap.js"></script>
+	<script>
+  
+$(document).ready(function() {
+
+	var elWidth = $(window).width();
+	var elHeight = $(window).height();
+
+	$('.slide-panel').css('width',elWidth).css('height',elHeight);
+
+  $('a[href*=#]').each(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname
+    && this.hash.replace(/#/,'') ) {
+      var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+      var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+       if ($target) {
+         var targetOffset = $target.offset().left;
+
+         $(this).click(function() {
+            $("#nav li a").removeClass("active");
+            $(this).addClass('active');
+           $('html, body').animate({scrollLeft: targetOffset}, 1000, 'easeInOutQuint');
+           return false;
+         });
+      }
+    }
+  });
+
+});
+
+</script>
+
+
+ </head> 
+	
+<body>
+
+
+<header id="header">
+<div class="content">
+<div id="logo"><a href=""> Bamberg </a></div>
+
+<nav id="nav">
+	<ul>
+		<li><a href="#slide1" class="active" title="Next Section" >Home</a></li>
+		<li><a href="#slide2" title="Next Section">Cervejas</a></li>
+		<li><a href="#slide3" title="Next Section">A cervejaria</a></li>
+		<li><a href="#slide4" title="Next Section">Onde Encontrar</a></li>
+		<li><a href="#slide5" title="Next Section">Cadastro</a></li>
+		<li><a href="http://www.cervejariabamberg.com.br/blog" title="Blog" target="_blank">Blog</a></li>
+	</ul>
+</nav>
+</div>
+</header>	
+
+	<div id="slide1" class="slide-panel">
+		<div class="content">
+			<div class="large-5 columns">
+				<h1>Cervejaria Bamberg</h1>
+
+				<h4>Prêmios</h4>
+				<div class="premios">
+					lista
+				</div>
+	            
+	        </div>
+	        <div class="large-7 columns">
+	        	<h2>Artesanal de verdade.</h2>
+	            <p>As cervejas Bamberg são produzidas com os melhores ingredientes,  e com a qualidade que só quem conhece de cerveja pode proporcionar. São mais de 20 prêmios internacionais, e rótulos que já foram aprovados pelos paladares mais respeitadas do Brasil!</p>
+
+	           <div class="large-6 columns">
+	             <img src="img/foto-blog.png" alt="Bamberg" />
+	           </div>
+
+	           <div class="notices">
+	            <h6>Bamberg <span>Tour</span></h6>
+	            <p><a href="#">Visita a fábrica com direito a degustação das cinco cervejas em linha, Pilsen, Munchen, Weizen, Schwarz e Rauch, mais duas cervejas sazonais disponíveis.</a></p>
+
+	            <h6>Ranking da <span>Playboy</span></h6>
+	            <p><a href="#">Nossa Rauchbier foi eleita pelo terceiro ano consecutivo como o melhor rótulo nacional!</a></p>
+	           </div>
+	        </div>
+		</div> 
+    </div> 
+
+	<div id="slide2" class="slide-panel">
+		<div class="content">
+
+   
+          <!-- Colunas Cervejas -->
+          <div class="large-6 columns">
+
+          	<h3>Cervejas</h3>
+					<ul class="submenu">
+						<li><a href="#" class="tradicionais">Rótulos Tradicionais</a>
+					         	<ul class="cervejas-tradicionais">
+					                  <li class="teste"><a href="#">Pilsen</a></li>
+					                  <li><a href="#">Weizen</a></li>
+					                  <li><a href="#">München</a></li>
+					                  <li><a href="#">Rauchbier</a></li>
+					                  <li><a href="#">Schwarzbier</a></li>
+					                  <li><a href="#">Altbier</a></li>
+					                  <li><a href="#">Bock</a></li> 
+					                  <li><a href="#">Helles</a></li>              
+					       		</ul>
+						</li>
+						<li><a href="#" class="sazonais">Sazonais</a>
+					         	<ul>
+					                  <li><a href="#">Pilsen</a></li>
+					                  <li><a href="#">Weizen</a></li>
+					                  <li><a href="#">München</a></li>
+					                  <li><a href="#">Rauchbier</a></li>
+					                  <li><a href="#">Schwarzbier</a></li>
+					                  <li><a href="#">Altbier</a></li>
+					                  <li><a href="#">Bock</a></li> 
+					                  <li><a href="#">Helles</a></li>              
+					       		</ul>
+
+						</li>
+						<li><a href="#" class="kits">Kits</a></li>
+					</ul>
+          </div>
+          <!-- /Colunas Cervejas -->
+
+          <!-- Descrição Cervejas -->
+          <div class="fixo">
+          	<img src="img/weizen.png" alt="Bamberg Weizen" />
+
+          	<ul class="itens">
+				<li>Trigo</li>
+				<li>Chope,  355 ml e 600 ml.</li>
+          	</ul>
+          </div>
+
+
+          <div class="large-6 columns beers">
+          	<h5>Bamberg Weizen</h5>
+          	 <div style="height: 400px; overflow-y: scroll;">
+              <p>Tradicional estilo da Bavária, na Alemanha, é uma cerveja de alta fermentação com 5,0% de teor alcoólico, refrescante, ideal para o verão brasileiro. A Bamberg Weizen é refermentada na garrafa e por isto não é pasteurizada, exatamente como este estilo é feito tradicionalmente no seu país de origem. Harmoniza com pratos leves, saladas, peixes, frutos do mar, culinária japonesa, porém culturalmente esta cerveja é consumida na Bavária com a salsicha branca (weisswurst) e Pretzel (Brezel). Temperatura ideal de consumo entre 4ºC e 6ºC.</p>
+
+              <p class="caracter"><strong>Aroma:</strong> Presença marcante dos ésteres (aroma de banana) e fenóis (aroma de cravo).<br />
+				<strong>Aparência:</strong> Coloração dourada, com espuma persistente e possui uma turbidez natural por não passar pelo processo de filtragem e com isto ainda conter fermento.<br />
+				<strong>Sabor:</strong> Nota-se no paladar a banana e o cravo provenientes do processo de fermentação, além disso, tem-se um final cítrico que confere um equilíbrio aos sabores. Não é perceptível a presença de amargor proveniente do lúpulo.<br />
+				<strong>Sensação na boca:</strong> Corpo médio, com alta carbonatação.</p>
+			 </div>
+          </div>
+          <!-- /Descrição Cervejas -->
+		
+
+		</div> 
+		</div> 
+    </div> 
+	
+	
+    <div id="slide3" class="slide-panel">
+		<div class="content">
+			<div class="large-6 columns history">
+            <h2>A cervejaria</h2>
+	            <div style="height: 600px; overflow-y: scroll;">
+	            <p>A micro cervejaria Bamberg nasceu no ano de 2005 em Votorantim, nas imediações de Sorocaba, interior de São Paulo. Os irmãos Alexandre, Thiago e Lucas visitaram várias cervejarias ao redor do mundo, e através de muita pesquisa e análise fundaram a Cervejaria e deu-se o nome de Bamberg em homenagem à cidade alemã que leva o mesmo nome, referência em produção de cervejas na Alemanha. A cidade de Bamberg é um importante centro turístico e cultural, que tem como uma de suas principais atrações turísticas a Cidade Histórica, famosa por sua rica arquitetura medieval, ainda preservada depois de séculos e reconhecida como patrimônio histórico mundial. Além disso, possui outra interessante característica: sua densidade de cervejarias por habitantes é a maior do mundo. </p>
+
+	            <p>Essa grande quantidade de cervejarias tem por base uma tradição de quase 900 anos, iniciada com a fabricação das primeiras cervejas em monastério por volta do século XII.<br />
+				Hoje, além da quantidade, Bamberg também é conhecida pela variedade da bebida, seus ingredientes cuidadosamente cultivados e selecionados, a qualidade do produto final e as características artesanais de sua produção, conservadas através de sua história. Tudo isso faz com que a cerveja seja descrita pelos habitantes da Baviera como o quinto elemento da natureza, juntamente com a terra, ar, água e fogo. Não foi por acaso que o nome da nossa cervejaria foi escolhido em homenagem a essa cidade.
+				O primeiro saco de malte jogado na nossa tina de cozimento foi no dia 18 de dezembro de 2005 e como não poderia ser diferente, este malte veio da cidade de Bamberg. Porém até chegarmos nesse ponto foram muitos anos de pesquisa, estudos e visitas em cervejarias no Brasil e vários paises da Europa.</p>
+				<p>Depois de muito estudo e análise faltava escolher o local. Decidimos instalar a cervejaria numa das regiões mais desenvolvidas do país, a região de Sorocaba, que junto com Votorantim formam um grande pólo industrial do nosso país, com desenvolvimento constante.</p>
+				<p>Assim nasceu nosso grande sonho. O resto da história vem sendo construído diariamente através da produção de cervejas especiais, feitas com ingredientes de altíssima qualidade e com muita dedicação de toda a equipe Bamberg. Quem mais se beneficia disso são nossos amigos e clientes, que tem a oportunidade de degustá-la aqui na cervejaria, nos bares, restaurantes ou em casa.</p>
+				<p>Com todo este cuidado logo a Cervejaria Bamberg começou a ser reconhecida como sinônimo de qualidade e este reconhecimento veio através de críticos especialistas, mídia em geral e prêmios nacionais e internacionais.</p>
+				<p>Assim é nosso dia-dia, fazendo cerveja com carinho e dedicação, para que cada dia seja melhor que a anterior</p>
+				</div>
+			</div>
+
+			<div class="large-4 columns">
+				<h3>Nossa História</h3>
+				Linha do tempo
+			</div>
+		</div> 
+    </div> 
+	
+	
+	<div id="slide4" class="slide-panel">
+		<div class="content">
+            <h2>Onde Encontrar</h2>
+            <p>As cervejas Bamberg são produzidas com os melhores ingredientes,  e com a qualidade que só quem conhece de cerveja pode proporcionar. São mais de 20 prêmios internacionais, e rótulos que já foram aprovados pelos paladares mais respeitadas do Brasil!</p>
+
+
+    <div class="large-6 columns">
+		    <div id="map-brazil">
+		     <ul class="brazil">
+		      <li class="br1"><a href="#acre">Acre</a></li>
+		      <li class="br2"><a href="#alagoas">Alagoas</a></li>
+		      <li class="br3"><a href="#amapa">Amapá</a></li>
+		      <li class="br4"><a href="#amazonas">Amazonas</a></li>
+		      <li class="br5"><a href="#bahia">Bahia</a></li>
+		      <li class="br6"><a href="#ceara">Ceará</a></li>
+		      <li class="br7"><a href="#distrito-federal">Distrito Federal</a></li>
+		      <li class="br8"><a href="#espirito-santo">Espírito Santo</a></li>
+		      <li class="br9"><a href="#goias">Goiás</a></li>
+		      <li class="br10"><a href="#maranhao">Maranhão</a></li>
+		      <li class="br11"><a href="#mato-grosso">Mato Grosso</a></li>
+		      <li class="br12"><a href="#mato-grosso-do-sul">Mato Grosso do Sul</a></li>
+		      <li class="br13"><a href="#minas-gerais">Minas Gerais</a></li>
+		      <li class="br14"><a href="#para">Pará</a></li>
+		      <li class="br15"><a href="#paraiba">Paraíba</a></li>
+		      <li class="br16"><a href="#parana">Paraná</a></li>
+		      <li class="br17"><a href="#pernambuco">Pernambuco</a></li>
+		      <li class="br18"><a href="#piaui">Piauí</a></li>
+		      <li class="br19"><a href="#rio-de-janeiro">Rio de Janeiro</a></li>
+		      <li class="br20"><a href="#rio-grande-do-norte">Rio Grande do Norte</a></li>
+		      <li class="br21"><a href="#rio-grande-do-sul">Rio Grande do Sul</a></li>
+		      <li class="br22"><a href="#rondonia">Rondônia</a></li>
+		      <li class="br23"><a href="#roraima">Roraima</a></li>
+		      <li class="br24"><a href="#santa-catarina">Santa Catarina</a></li>
+		      <li class="br25"><a href="#sao-paulo">São Paulo</a></li>
+		      <li class="br26"><a href="#sergipe">Sergipe</a></li>
+		      <li class="br27"><a href="#tocantins">Tocantins</a></li> 
+		     </ul>
+		    </div>
+    </div>
+
+<div class="large-5 columns">
+			<div id="estado_container">
+				    <div id="acre" class="estado">
+
+				        <ul class="group">
+				            <li class="list-group-item">Acre</li>
+				        </ul>
+
+				    </div>
+
+
+				    <div id="amapa" class="estado">
+
+				        <ul class="list-group">
+				            <li class="list-group-item">Amapá</li>
+				        </ul>
+
+				    </div>
+
+			      <div id="alagoas" class="estado">
+
+			          <ul class="list-group">
+			              <li class="list-group-item">Alagoas</li>
+			          </ul>
+
+			      </div>
+
+			      <div id="amazonas" class="estado">
+
+			          <ul class="list-group">
+			              <li class="list-group-item">Amazonas</li>
+			          </ul>
+
+			      </div>
+
+			      <div id="bahia" class="estado">
+
+			          <ul class="list-group">
+			              <li class="list-group-item">Escolas da Bahia</li>
+			          </ul>
+
+			      </div>
+
+			      <div id="ceara" class="estado">
+
+			          <ul class="list-group">
+			              <li class="list-group-item">Ceará</li>
+			          </ul>
+
+			      </div>      
+
+			      <div id="distrito-federal" class="estado">
+
+			          <ul class="list-group">
+			              <li class="list-group-item">Distrito Federal</li>
+			          </ul>
+
+			      </div>
+
+			      <div id="espirito-santo" class="estado">
+
+			          <ul class="list-group">
+			              <li class="list-group-item">Espírito Santo</li>
+			          </ul>
+
+			      </div>
+
+			      <div id="goias" class="estado">
+
+			          <ul class="list-group">
+			              <li class="list-group-item">Goias</li>
+			          </ul>
+
+			      </div>
+
+			      <div id="maranhao" class="estado">
+
+			          <ul class="list-group">
+			              <li class="list-group-item">Maranhão</li>
+			          </ul>
+
+			      </div>
+
+			      <div id="mato-grosso" class="estado">
+
+			          <ul class="list-group">
+			              <li class="list-group-item">Mato Grosso</li>
+			          </ul>
+
+			      </div>
+
+			      <div id="mato-grosso-do-sul" class="estado">
+
+			          <ul class="list-group">
+			              <li class="list-group-item">Mato Grosso do Sul</li>
+			          </ul>
+
+			      </div>
+
+			      <div id="minas-gerais" class="estado">
+
+			          <ul class="list-group">
+			              <li class="list-group-item">Minas Gerais</li>
+			          </ul>
+
+			      </div>
+
+			      <div id="para" class="estado">
+
+			          <ul class="list-group">
+			              <li class="list-group-item">Pará</li>
+			          </ul>
+
+			      </div>      
+
+			      <div id="paraiba" class="estado">
+
+			          <ul class="list-group">
+			              <li class="list-group-item">Escolas da Paraíba</li>
+			          </ul>
+
+			      </div> 
+
+			      <div id="parana" class="estado">
+
+			          <ul class="list-group">
+			              <li class="list-group-item">Paraná</li>
+			          </ul>
+
+			      </div>
+
+			      <div id="pernambuco" class="estado">
+
+			          <ul class="list-group">
+			              <li class="list-group-item">Pernambuco</li>
+			          </ul>
+
+			      </div>
+
+			      <div id="piaui" class="estado">
+
+			          <ul class="list-group">
+			              <li class="list-group-item">Piaui</li>
+			          </ul>
+
+			      </div>
+
+			      <div id="rio-de-janeiro" class="estado">
+
+			          <ul class="list-group">
+			              <li class="list-group-item">Rio de Janeiro</li>
+			          </ul>
+
+			      </div>      
+
+			      <div id="rio-grande-do-norte" class="estado">
+
+			          <ul class="list-group">
+			              <li class="list-group-item">Rio Grande do Norte</li>
+			          </ul>
+
+			      </div>
+
+			      <div id="rio-grande-do-sul" class="estado">
+
+			          <ul class="list-group">
+			              <li class="list-group-item">Rio Grande do Sul</li>
+			          </ul>
+
+			      </div>
+
+			      <div id="rondonia" class="estado">
+
+			          <ul class="list-group">
+			              <li class="list-group-item">Rondônia</li>
+			          </ul>
+
+			      </div>
+
+			      <div id="roraima" class="estado">
+
+			          <ul class="list-group">
+			              <li class="list-group-item">Roraima</li>
+			          </ul>
+
+			      </div>
+
+			      <div id="santa-catarina" class="estado">
+
+			          <ul class="list-group">
+			              <li class="list-group-item">Santa Catarina</li>
+			          </ul>
+
+			      </div>
+
+			      <div id="sao-paulo" class="estado">
+
+			          <ul class="list-group">
+			              <li class="list-group-item">São Paulo</li>
+			          </ul>
+
+			      </div>
+
+			      <div id="sergipe" class="estado">
+
+			          <ul class="list-group">
+			              <li class="list-group-item">Sergipe</li>
+			          </ul>
+
+			      </div>
+
+			      <div id="tocantins" class="estado">
+
+			          <ul class="list-group">
+			              <li class="list-group-item">Tocantins</li>
+			          </ul>
+
+			      </div>      
+			    </div>
+
+			    <!-- Estado conteiner -->
+	</div>
+		</div> 
+    </div> 
+
+	<div id="slide5" class="slide-panel">
+		<div class="content">
+            <h2>Contato</h2>
+<!--
+<form>
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Input Label</label>
+      <input type="text" placeholder="large-12.columns" />
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-4 columns">
+      <label>Input Label</label>
+      <input type="text" placeholder="large-4.columns" />
+    </div>
+    <div class="large-4 columns">
+      <label>Input Label</label>
+      <input type="text" placeholder="large-4.columns" />
+    </div>
+    <div class="large-4 columns">
+      <div class="row collapse">
+        <label>Input Label</label>
+        <div class="small-9 columns">
+          <input type="text" placeholder="small-9.columns" />
+        </div>
+        <div class="small-3 columns">
+          <span class="postfix">.com</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Select Box</label>
+      <select>
+        <option value="husker">Husker</option>
+        <option value="starbuck">Starbuck</option>
+        <option value="hotdog">Hot Dog</option>
+        <option value="apollo">Apollo</option>
+      </select>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-6 columns">
+      <label>Choose Your Favorite</label>
+      <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Radio 1</label>
+      <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Radio 2</label>
+    </div>
+    <div class="large-6 columns">
+      <label>Check these out</label>
+      <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
+      <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="large-12 columns">
+      <label>Textarea Label</label>
+      <textarea placeholder="small-12.columns"></textarea>
+    </div>
+  </div>
+</form>
+-->
+		</div> 
+    </div>
+
+
+<script type="text/javascript">
+	  document.getElementById('acre').style.display = "none";
+	  document.getElementById('alagoas').style.display = "none";
+    document.getElementById('amapa').style.display = "none"; 
+    document.getElementById('amazonas').style.display = "none"; 
+    document.getElementById('bahia').style.display = "none"; 
+    document.getElementById('ceara').style.display = "none"; 
+    document.getElementById('distrito-federal').style.display = "none"; 
+    document.getElementById('espirito-santo').style.display = "none"; 
+    document.getElementById('goias').style.display = "none";
+    document.getElementById('maranhao').style.display = "none"; 
+    document.getElementById('mato-grosso').style.display = "none"; 
+    document.getElementById('mato-grosso-do-sul').style.display = "none"; 
+    document.getElementById('minas-gerais').style.display = "none"; 
+    document.getElementById('para').style.display = "none"; 
+    document.getElementById('paraiba').style.display = "none"; 
+    document.getElementById('parana').style.display = "none"; 
+    document.getElementById('pernambuco').style.display = "none";
+    document.getElementById('piaui').style.display = "none"; 
+    document.getElementById('rio-de-janeiro').style.display = "none"; 
+    document.getElementById('rio-grande-do-norte').style.display = "none"; 
+    document.getElementById('rio-grande-do-sul').style.display = "none"; 
+    document.getElementById('rondonia').style.display = "none"; 
+    document.getElementById('roraima').style.display = "none";
+    document.getElementById('santa-catarina').style.display = "none"; 
+    document.getElementById('sao-paulo').style.display = "none"; 
+    document.getElementById('sergipe').style.display = "none"; 
+    document.getElementById('tocantins').style.display = "none";
+      $('#map-brazil').cssMap({
+        'size': 500,          // set map size to 660px wide;
+        'searchLink': 'Pesquisa',  // rename search button; 
+        'onClick' : function(e) {
+        	var estado = e.children('a').attr('href').replace('#', '');  
+        	$('.estado').slideUp('slow');
+        	$('#'+estado).slideDown('slow'); 
+        	      
+        }
+       });
+ </script>   
+
+</body>
+</html>

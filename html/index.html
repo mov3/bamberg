@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+       <title>Bamberg</title>
+       <link rel="stylesheet" href="css/style.css"/>
+       <link rel="stylesheet" href="css/foundation.css"/>
+	   
+       <link href='http://fonts.googleapis.com/css?family=Wellfleet' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Arvo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>	
+	   <link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+	   <link href='http://fonts.googleapis.com/css?family=Goudy+Bookletter+1911' rel='stylesheet' type='text/css'>
+	   <script type="text/javascript" src="js/jquery-1.8.0.min.js"></script>
+	   <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	   <script type="text/javascript" src="js/foundation.min.js"></script>
+	<script>
+  
+$(document).ready(function() {
+
+	var elWidth = $(window).width();
+	var elHeight = $(window).height();
+
+	$('.slide-panel').css('width',elWidth).css('height',elHeight);
+
+  $('a[href*=#]').each(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname
+    && this.hash.replace(/#/,'') ) {
+      var $targetId = $(this.hash), $targetAnchor = $('[name=' + this.hash.slice(1) +']');
+      var $target = $targetId.length ? $targetId : $targetAnchor.length ? $targetAnchor : false;
+       if ($target) {
+         var targetOffset = $target.offset().left;
+
+         $(this).click(function() {
+            $("#nav li a").removeClass("active");
+            $(this).addClass('active');
+           $('html, body').animate({scrollLeft: targetOffset}, 1500, 'easeInOutQuint');
+           return false;
+         });
+      }
+    }
+  });
+
+});
+
+
+	$(document).ready(function(){
+		var content = $('#content');
+ 
+		//pre carregando o gif
+		loading = new Image(); loading.src = 'loading.gif';
+		$('#menu a').live('click', function( e ){
+			e.preventDefault();
+			content.html( '<img src="loading.gif" />' );
+ 
+			var href = $( this ).attr('href');
+			$.ajax({
+				url: href,
+				success: function( response ){
+					//forçando o parser
+					var data = $( '<div>'+response+'</div>' ).find('#content').html();
+ 
+					//apenas atrasando a troca, para mostrarmos o loading
+					window.setTimeout( function(){
+						content.fadeOut('fast', function(){
+							content.html( data ).fadeIn();
+						});
+					}, 200 );
+				}
+			});
+ 
+		});
+	});
+</script>
+
+
+ </head> 
+	
+<body>
+
+
+<header id="header">
+<div class="content">
+<div id="logo"><a href=""> Bamberg </a></div>
+
+	<nav id="nav">
+		<ul>
+			<li><a href="#slide1" class="active" title="Home" >Home</a></li>
+			<li><a href="#slide2" title="Cervejas">Cervejas</a></li>
+			<li><a href="#slide3" title="A cervejaria">A cervejaria</a></li>
+			<li><a href="#slide4" title="Onde Encontrar">Onde Encontrar</a></li>
+			<li><a href="#slide5" title="Contato">Contato</a></li>
+			<li><a href="http://www.cervejariabamberg.com.br/blog" title="Blog" target="_blank">Blog</a></li>
+		</ul>
+	</nav>
+</div>
+</header>	
+
+	<div id="slide1" class="slide-panel">
+		<div class="content">
+			<div class="large-5 columns">
+				<h1>Cervejaria Bamberg</h1>
+
+				<h4>Prêmios</h4>
+				<div class="premios">
+					lista
+				</div>
+	            
+	        </div>
+	        <div class="large-7 columns">
+	        	<h2>Artesanal de verdade.</h2>
+	            <p>As cervejas Bamberg são produzidas com os melhores ingredientes,  e com a qualidade que só quem conhece de cerveja pode proporcionar. São mais de 20 prêmios internacionais, e rótulos que já foram aprovados pelos paladares mais respeitadas do Brasil!</p>
+
+	           <div class="large-6 columns">
+	             <img src="img/foto-blog.png" alt="Bamberg" />
+	           </div>
+
+	           <div class="notices">
+	            <h6>Bamberg <span>Tour</span></h6>
+	            <p><a href="#">Visita a fábrica com direito a degustação das cinco cervejas em linha, Pilsen, Munchen, Weizen, Schwarz e Rauch, mais duas cervejas sazonais disponíveis.</a></p>
+
+	            <h6>Ranking da <span>Playboy</span></h6>
+	            <p><a href="#">Nossa Rauchbier foi eleita pelo terceiro ano consecutivo como o melhor rótulo nacional!</a></p>
+	           </div>
+	        </div>
+		</div> 
+    </div> 
+
+	<div id="slide2" class="slide-panel">
+		<div class="content">
+
+   
+          <!-- Colunas Cervejas -->
+          <div class="large-6 columns">
+
+          	<h3>Cervejas</h3>
+					<ul class="submenu" id="menu">
+						<li><a href="#" class="tradicionais">Rótulos Tradicionais</a>
+					         	<ul class="cervejas-tradicionais">
+					                  <li class="teste"><a href="#">Pilsen</a></li>
+					                  <li><a href="weizen.html">Weizen</a></li>
+					                  <li><a href="munchen.html">München</a></li>
+					                  <li><a href="rauchbier.html">Rauchbier</a></li>
+					                  <li><a href="schwarzbier.html">Schwarzbier</a></li>
+					                  <li><a href="altbier.html">Altbier</a></li>
+					                  <li><a href="bock.html">Bock</a></li> 
+					                  <li><a href="helles.html">Helles</a></li>              
+					       		</ul>
+						</li>
+						<li><a href="#" class="sazonais">Sazonais</a>
+					         	<ul>
+					                  <li><a href="#">Pilsen</a></li>
+					                  <li><a href="#">Weizen</a></li>
+					                  <li><a href="#">München</a></li>
+					                  <li><a href="#">Rauchbier</a></li>
+					                  <li><a href="#">Schwarzbier</a></li>
+					                  <li><a href="#">Altbier</a></li>
+					                  <li><a href="#">Bock</a></li> 
+					                  <li><a href="#">Helles</a></li>              
+					       		</ul>
+
+						</li>
+						<li><a href="#" class="kits">Kits</a></li>
+					</ul>
+          </div>
+          <!-- /Colunas Cervejas -->
+
+          <!-- Descrição Cervejas -->
+          <div class="fixo">
+          	<img src="img/cervejas/weizen.png" alt="Bamberg Weizen" />
+
+          	<ul class="itens">
+				<li>Trigo</li>
+				<li>Chope,  355 ml e 600 ml.</li>
+          	</ul>
+          </div>
+
+
+          <div class="large-6 columns beers" id="content">
+          	<h5>Bamberg Weizen</h5>
+
+              <p>Tradicional estilo da Bavária, na Alemanha, é uma cerveja de alta fermentação com 5,0% de teor alcoólico, refrescante, ideal para o verão brasileiro. A Bamberg Weizen é refermentada na garrafa e por isto não é pasteurizada, exatamente como este estilo é feito tradicionalmente no seu país de origem. Harmoniza com pratos leves, saladas, peixes, frutos do mar, culinária japonesa, porém culturalmente esta cerveja é consumida na Bavária com a salsicha branca (weisswurst) e Pretzel (Brezel). Temperatura ideal de consumo entre 4ºC e 6ºC.</p>
+
+              <p class="caracter"><strong>Aroma:</strong> Presença marcante dos ésteres (aroma de banana) e fenóis (aroma de cravo).<br />
+				<strong>Aparência:</strong> Coloração dourada, com espuma persistente e possui uma turbidez natural por não passar pelo processo de filtragem e com isto ainda conter fermento.<br />
+				<strong>Sabor:</strong> Nota-se no paladar a banana e o cravo provenientes do processo de fermentação, além disso, tem-se um final cítrico que confere um equilíbrio aos sabores. Não é perceptível a presença de amargor proveniente do lúpulo.<br />
+				<strong>Sensação na boca:</strong> Corpo médio, com alta carbonatação.</p>
+
+          </div>
+          <!-- /Descrição Cervejas -->
+		
+
+		</div> 
+		</div> 
+    </div> 
+	
+	
+    <div id="slide3" class="slide-panel">
+		<div class="content">
+			<div class="large-6 columns history">
+            <h2>A cervejaria</h2>
+	            <div style="height: 600px; overflow-y: scroll;">
+	            <p>A micro cervejaria Bamberg nasceu no ano de 2005 em Votorantim, nas imediações de Sorocaba, interior de São Paulo. Os irmãos Alexandre, Thiago e Lucas visitaram várias cervejarias ao redor do mundo, e através de muita pesquisa e análise fundaram a Cervejaria e deu-se o nome de Bamberg em homenagem à cidade alemã que leva o mesmo nome, referência em produção de cervejas na Alemanha. A cidade de Bamberg é um importante centro turístico e cultural, que tem como uma de suas principais atrações turísticas a Cidade Histórica, famosa por sua rica arquitetura medieval, ainda preservada depois de séculos e reconhecida como patrimônio histórico mundial. Além disso, possui outra interessante característica: sua densidade de cervejarias por habitantes é a maior do mundo. </p>
+
+	            <p>Essa grande quantidade de cervejarias tem por base uma tradição de quase 900 anos, iniciada com a fabricação das primeiras cervejas em monastério por volta do século XII.<br />
+				Hoje, além da quantidade, Bamberg também é conhecida pela variedade da bebida, seus ingredientes cuidadosamente cultivados e selecionados, a qualidade do produto final e as características artesanais de sua produção, conservadas através de sua história. Tudo isso faz com que a cerveja seja descrita pelos habitantes da Baviera como o quinto elemento da natureza, juntamente com a terra, ar, água e fogo. Não foi por acaso que o nome da nossa cervejaria foi escolhido em homenagem a essa cidade.
+				O primeiro saco de malte jogado na nossa tina de cozimento foi no dia 18 de dezembro de 2005 e como não poderia ser diferente, este malte veio da cidade de Bamberg. Porém até chegarmos nesse ponto foram muitos anos de pesquisa, estudos e visitas em cervejarias no Brasil e vários paises da Europa.</p>
+				<p>Depois de muito estudo e análise faltava escolher o local. Decidimos instalar a cervejaria numa das regiões mais desenvolvidas do país, a região de Sorocaba, que junto com Votorantim formam um grande pólo industrial do nosso país, com desenvolvimento constante.</p>
+				<p>Assim nasceu nosso grande sonho. O resto da história vem sendo construído diariamente através da produção de cervejas especiais, feitas com ingredientes de altíssima qualidade e com muita dedicação de toda a equipe Bamberg. Quem mais se beneficia disso são nossos amigos e clientes, que tem a oportunidade de degustá-la aqui na cervejaria, nos bares, restaurantes ou em casa.</p>
+				<p>Com todo este cuidado logo a Cervejaria Bamberg começou a ser reconhecida como sinônimo de qualidade e este reconhecimento veio através de críticos especialistas, mídia em geral e prêmios nacionais e internacionais.</p>
+				<p>Assim é nosso dia-dia, fazendo cerveja com carinho e dedicação, para que cada dia seja melhor que a anterior</p>
+				</div>
+			</div>
+
+			<div class="large-4 columns">
+				<h3>Nossa História</h3>
+				Linha do tempo
+			</div>
+		</div> 
+    </div> 
+	
+	
+	<div id="slide4" class="slide-panel">
+		<div class="content">		
+
+			    <div class="large-7 columns">
+		            <h2>Encontre a Bamberg mais próxima de você.</h2>
+		            <p>Presentes nas principais localidades, shoppings e aeroportos, 
+					nossas lojas são espaços modernos e seguros que você pode 
+					contar com o atendimento de uma equipe especialista em 
+					câmbio, para apoiar todas as suas necessidades.</p>
+
+
+					<fieldset>
+						<legend>Para localizar uma loja, digite o endereço, seguido da cidade.</legend>
+						      <div class="row collapse">
+						        <div class="small-10 columns">
+						          <input type="text" placeholder="Localizar">
+						        </div>
+						        <div class="small-2 columns">
+						          <a href="#" class="button postfix radius">Localizar</a>
+						        </div>
+						      </div>
+		            </fieldset>
+
+		            <p class="obs">Ex: Avenida Paulista, São Paulo <br />
+					Dica: Para melhor visualização de lojas, após a localização, aproxime o mapa.</p>
+		                	
+		            
+
+		           <!--
+
+					<h3>Selecione o seu Estado e sua Cidade</h3>
+
+
+				    <div class="large-6 columns">
+				    <label>Selecione uma Cidade</label>
+				      <select>
+				        <option value="apollo">Selecione um Estado</option>
+				        <option value="apollo">Alagoas</option>
+				        <option value="apollo">Amazonas</option>
+				        <option value="apollo">Bahia</option>
+				        <option value="apollo">Ceará</option>
+				        <option value="apollo">Distrito Federal</option>
+						<option value="apollo">Espirito Santo</option>
+						<option value="apollo">Goiás</option>
+						<option value="apollo">Maranhão</option>
+						<option value="apollo">Mato Grosso</option>
+						<option value="apollo">Mato Grosso do Sul</option>
+						<option value="apollo">Minas Gerais</option>
+						<option value="apollo">Paraná</option>
+						<option value="apollo">Pará</option>
+						<option value="apollo">Pernambuco</option>
+						<option value="apollo">Piauí</option>
+						<option value="apollo">Rio Grande do Norte</option>
+						<option value="apollo">Rio Grande do Sul</option>
+						<option value="apollo">Rio de Janeiro</option>
+						<option value="hotdog">Santa Catarina</option>
+						<option value="starbuck">Sergipe</option>
+				        <option value="husker">São Paulo</option>
+				        
+				      </select>
+				    </div>
+
+				    <div class="large-6 columns">
+				      <label>Selecione uma Cidade</label>
+				      <select>
+				        <option value="husker">Selecione uma Cidade</option>
+				      </select>
+				    </div>
+
+				    -->
+
+			    </div>
+
+				<div class="large-4 columns">
+					<div class="result">
+							<h5>Pontos de Venda</h5>
+
+							<hr />
+
+							<h6>Hamburgueria New Yorker</h6>
+							<address>Rua Santo André , 177</address>
+							<span>(14) 4367-912</span>
+
+							<hr />
+
+							<h6>Old Flag Pub</h6>
+							<address>Rua Paineiras , 378, Jardim</address>
+							<span>(11) 4990-8317</span>
+					</div>
+				</div>
+
+		</div> <!-- /Content -->
+    </div> 
+
+	<div id="slide5" class="slide-panel">
+		<div class="content">
+            <h2>Contato</h2>
+
+            <div class="large-6 columns">
+				<form>
+					<fieldset>
+					  <div class="row">
+					    <div class="large-12 columns">
+					      <label>Nome Completo</label>
+					      <input type="text" placeholder="" />
+					    </div>
+
+					    <div class="large-6 columns">
+					      <label>E-mail</label>
+					      <input type="text" placeholder="" />
+					    </div>
+
+					    <div class="large-6 columns">
+					      <label>Cidade</label>
+					      <input type="text" placeholder="" />
+					    </div>
+
+					    <div class="large-12 columns">
+					      <label>Mensagem</label>
+					      <textarea placeholder=""></textarea>
+					    </div>
+
+					    <div class="large-5 columns">
+					    	<a href="#" class="button">Enviar</a>
+					    </div>
+					  </div>
+				  </fieldset>
+				</form>
+
+				<p>R. Sebastião Benedito Reis, 582<br />
+				Parque Jataí II • Cep 18117-370 • Votorantim - SP<br />
+				(15) 3242.7685 / 9 9123.3478<br /></p>
+
+				<p>Plantão Sorocaba e Região<br />
+				*Apenas para problemas com equipamentos*<br />
+				Sábados das 15:00 às 18:00<br />
+				Domingo das 09:00 às 12:00<br />
+				(15) 9 9123-3478</p>
+			</div> <!-- coluna 1 -->
+
+			<div class="large-6 columns">
+				<iframe width="100%" height="250" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.br/maps?f=q&amp;source=s_q&amp;hl=pt-BR&amp;geocode=&amp;q=R.+Sebasti%C3%A3o+Benedito+Reis&amp;sll=-23.520428,-47.463168&amp;sspn=0.124188,0.154324&amp;ie=UTF8&amp;hq=&amp;hnear=R.+Sebasti%C3%A3o+Benedito+Reis+-+Parque+Jata%C3%AD,+Votorantim+-+S%C3%A3o+Paulo,+18117-370&amp;t=m&amp;z=14&amp;ll=-23.56973,-47.459028&amp;output=embed"></iframe><br /><small><a href="https://maps.google.com.br/maps?f=q&amp;source=embed&amp;hl=pt-BR&amp;geocode=&amp;q=R.+Sebasti%C3%A3o+Benedito+Reis&amp;sll=-23.520428,-47.463168&amp;sspn=0.124188,0.154324&amp;ie=UTF8&amp;hq=&amp;hnear=R.+Sebasti%C3%A3o+Benedito+Reis+-+Parque+Jata%C3%AD,+Votorantim+-+S%C3%A3o+Paulo,+18117-370&amp;t=m&amp;z=14&amp;ll=-23.56973,-47.459028" style="color:#0000FF;text-align:left">Exibir mapa ampliado</a></small>
+
+
+				<div class="newsletter">
+					<h4>Newsletter</h4>
+						<p class="obs">Cadastre-se em nossa newsletter para receber promoções, dicas e informações da franconia brasileira.</p>
+
+					<form>
+
+					    <div class="large-6 columns">
+					      <label>Nome Completo</label>
+					      <input type="text" placeholder="" />
+					    </div>
+
+					    <div class="large-6 columns">
+					      <label>E-mail</label>
+					      <input type="text" placeholder="" />
+					    </div>
+
+					</form>
+				</div>
+			</div>
+
+		</div> 
+    </div>
+
+
+</body>
+</html>
