@@ -15,6 +15,9 @@ body{
 	background: url('../img/bg.jpg') 0 0 no-repeat;
 }
 
+::selection { background: #1f6a8f; color: #fff; } ::-moz-selection { background: #1f6a8f; color: #fff; }
+
+
 h1{
 	display: block;
 	width: 316px;
@@ -254,7 +257,7 @@ ul.itens li {
 #slide5{
 	background: url('../img/encontre.jpg') 100% 0 no-repeat fixed;
 	margin: 0 auto;
-	padding: 20px 0;
+	padding: 40px 0;
 }
 
 #slide6{
@@ -284,5 +287,15 @@ ul.itens li {
 
 .address p {
 	font-size: 12px;
+}
+
+.logomenor {
+	float:right;
+	margin:0 0 0 80%;
+	position: absolute;
+	z-index: 10;
+	background: url('../img/logo-menor.png') top right no-repeat;
+	width:200px;
+	height:200px;
 }
 

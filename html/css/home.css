@@ -1,0 +1,77 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family:"Arvo", serif;
+	background: url('../img/home.jpg') no-repeat center center fixed;   -webkit-background-size: cover;   -moz-background-size: cover;   -o-background-size: cover;   background-size: cover;
+}
+
+
+h1{
+	display: block;
+	width: 316px;
+	height: 311px;
+	margin: 0 auto;
+	background: url('../img/logo.png'); 
+	text-indent: -9999px;
+}
+
+h2 { 
+    font-family:"Arvo", serif;
+	font-weight:normal;
+	font-size: 2em;
+	color: #404040;
+	margin: 0;
+	padding: 25px 0 0 0;
+}
+
+.content {
+	margin:0 auto;
+	padding:20px 0 0 0;
+	text-align: center;
+}
+
+.choice {
+	width:600px;
+	height:80px;
+	margin:0 auto;
+}
+.choice ul{
+	margin:40px;
+	padding:0;
+	font-size: 3em;
+	
+}
+.choice ul li {
+	display:inline-block;
+	width:200px;
+	height:80px;
+}
+.choice ul li a{
+	margin:0;
+	padding:14px 40px 14px 73px;
+	text-decoration: none;
+	-webkit-box-shadow: 0 8px 6px -6px #73837e;
+	   -moz-box-shadow: 0 8px 6px -6px #73837e;
+	        box-shadow: 0 8px 6px -6px #73837e;
+}
+.choice ul li a.yes{
+	color:#559d4d;
+	background: rgba(255,255,255,0.5) url('../img/yesno.png') 17px 17px no-repeat; 
+}
+.choice ul li a.no{
+	color:#cc323e;
+	background: rgba(255,255,255,0.5) url('../img/yesno.png') 17px -83px no-repeat;
+}
+.choice ul li a.yes:hover, .choice ul li a.no:hover{
+	background-color: rgba(255,255,255,0.65); 
+}
+
+footer { 
+	width:100%;
+	bottom:0;
+	padding:10px 0 10px 100px;
+	position: absolute;
+	background-color: #559d4d;
+	height:20px;
+	color:#FFF;
+}
