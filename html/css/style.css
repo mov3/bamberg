@@ -157,6 +157,7 @@ ul.built { list-style: none; margin: 0 auto; width: 730px; }
 	margin:60px 0 0 0;
 	padding:80px 0 0 0;
 	z-index:1;
+	min-height:494px;
 }
 
 .beers p{
@@ -238,29 +239,28 @@ ul.itens li {
 }
 
 #slide3{
-	background-color: rgba(243,253,237,0.7); 
+	background: url('../img/slide2.png') 100% 0 no-repeat fixed;
 	height: 600px;
 	padding: 20px 0 260px 0;
 	background-size: cover;
 }
 
 #slide4{
-	background: url('../img/map.jpg') repeat-y fixed;
 	color: #333333;
 	height: 300px;
 	padding: 20px 0;
 }
 
 #slide5{
-	background-color: #f3f5ed;
+	background: url('../img/encontre.jpg') 100% 0 no-repeat fixed;
 	margin: 0 auto;
 	padding: 20px 0;
 }
 
 #slide6{
-	background: url('../img/slide1.jpg') repeat-y fixed;
+	background: url('../img/contato.jpg') 100% 0 no-repeat fixed;
 	margin: 0 auto;
-	padding: 200px 0;
+	padding: 20px 0;
 }
 
 
@@ -280,5 +280,9 @@ ul.itens li {
 
 .newsletter p{
 	float:left;
+}
+
+.address p {
+	font-size: 12px;
 }
 
